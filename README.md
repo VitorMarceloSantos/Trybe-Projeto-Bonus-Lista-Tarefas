@@ -7,7 +7,7 @@
 ##
 
 <div>
-  <h3>Link do GitHub Page:</h3> https://vitormarcelosantos.github.io/Trybe-Projeto-01-Lessons-Learned/
+  <h3>Link do GitHub Page:</h3> https://vitormarcelosantos.github.io/Trybe-Projeto-Bonus-Lista-Tarefas/
 </div>
 
 ##
