@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/13af6c0cdd.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Lista de Tarefas</title>
+</head>
+<body>
+  <div id="container-geral">
+    <header>
+      <h1>Minha lista de tarefas</h1> <!--Requisito 01-->
+      <p id="funcionamento">Clique duas vezes em um item para marcá-lo como completo</p> <!--Requisito 02-->
+    </header>
+    <main>
+      <section id="container-inputs">
+        <!--Container-input-->
+        <p>Insira a tarefa desejada:</p>
+        <input type="text" name="texto-tarefa" id="texto-tarefa" placeholder="Tarefa(s)..."> <!--Requisito 03-->
+        <input type="button" id="criar-tarefa" class="btns" value="Adicionar"> <!--Requisito 05-->
+      </section>
+      <section id="container-tarefas"> <!--Requisito 04-->
+        <div id="container-caderno">
+          <div id="container-informacoes">
+            <h2>Tarefas</h2>
+            <p id="data-usuario"></p>
+          </div>
+          <ol id="lista-tarefas"></ol> <!--A lista será preenchida de maneira dinâmica-->
+        </div>
+      </section>
+      <section id="container-opcoes">
+        <div id="botoes-icons">
+          <abbr title="Apagar Elemento"><button id="remover-selecionado"><i class="fa-solid fa-circle-xmark transf-botao"></i></button></abbr> <!-- abbr: utilizado para explicar os botões-->
+          <abbr title="Mover Cima"><button id="mover-cima"><i class="fa-solid fa-arrow-up transf-botao"></i></button></abbr>
+          <abbr title="Mover Baixo"><button id="mover-baixo"><i class="fa-solid fa-arrow-down transf-botao"></i></button></abbr>
+          <abbr title="Finalizar"><button id="btn-check"><i class="fa-solid fa-circle-check transf-botao"></i></button></abbr>
+          <input type="button" value="Limpar Finalizados" class="btns" id="remover-finalizados">
+          <input type="button" value="Limpar Lista" class="btns" id="apaga-tudo">
+          <input type="button" value="Salvar Lista" class="btns" id="salvar-tarefas">
+          <input type="button" value="Recuperar Lista" class="btns" id="recuperar-tarefas">
+        </div>
+      </section>
+    </main>
+    <footer>
+      <small class="desenvolvedor">&copy;Desenvolvido por Vitor Marcelo - Turma 23 - Tribo B</small>
+                <div class="icones">
+                    <a href="https://github.com/VitorMarceloSantos" target="_blank" rel="external"><i
+                            class="fa-brands fa-github"></i></a>
+                    <!--Os icones possuem as mesmas caractericas que os textos-->
+                    <a href="https://www.linkedin.com/in/vitor-marcelo-santos/" target="_blank" rel="external"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/vitor_marcelo_santos/" target="_blank" rel="external"><i
+                            class="fa-brands fa-instagram-square"></i></a>
+    </footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

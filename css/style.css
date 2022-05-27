@@ -1,0 +1,270 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Bebas;
+  src: url('../fonts/Bebas_Neue/BebasNeue-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: Playball;
+  src: url('../fonts/Playball/Playball-Regular.ttf') format('truetype');
+}
+*{ /* Configurações Gerais */
+  padding: 0;
+  margin: 0;
+}
+/* Root */
+:root{/* root - raiz do CSS, Criando Variáveis em CSS */
+  /* Fontes */
+  --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+  --fonte-titulos: "Bebas";
+  --fonte-tarefas: "Playball";
+  /* Cores */
+  --verde: rgb(76, 164, 109); 
+}
+
+/* Geral */
+body{
+  width: 80vw;
+  margin: auto;
+  text-align: center;
+  background-color: var(--verde);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.418);
+  font-size: 1.3em;
+}
+/* Main */
+#container-geral{
+  background-color: white;
+  height: 95vh;
+  margin-top: 2.5vh; /* Margem total 10vh */
+}
+/* Cabeçalho */
+header{
+  height: 8vh; /* Tamanho do Header */
+  font-family: var(--fonte-titulos);
+  padding: 10px;
+}
+header h1{
+  font-size: 2em;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.425);
+}
+header p{
+  font-size: 1em;
+}
+/* Inputs */
+#container-inputs{
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 10px;
+}
+#container-inputs input[type='text']{
+  width: 25%; /* em relaçao ao elemento  pai */
+  line-height: 20px;
+  margin-bottom: 8px;
+  margin-top: 6px;
+  font-size: .7em;
+}
+#container-inputs input[type='text']:focus{ /* Focus: quando o elemento estiver com o foco(selecionado) irá realizar as alterações */
+  border: 2px solid var(--verde);
+}
+#container-inputs p{
+  font-size: .8em;
+}
+.btns{
+  padding: 1px;
+  font-size: .6em;
+}
+.btns:hover{
+  background-color: var(--verde);
+  color: white;
+  cursor: pointer;
+}
+/* Lista */
+#container-tarefas{
+  height: 60vh;
+  background-image: url('../img/pngwing.com.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  position: relative;
+}
+#lista-tarefas{
+  position: absolute;
+  height: 75%;
+  width: 18%;
+  top: 53%; /*Tem como referência container-tarefas*/
+  left: 50%;/*Tem como referência container-tarefas*/
+  transform: translate(-50%, -50%); /*Tem como referência container-tarefas*/
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-left: 35px;
+}
+#lista-tarefas li{
+  line-height: 40px;
+  font-size: .8em;
+}
+/* Classes utilizadas no JS */
+.elemento-selecionado{ /* Usada para adicionar cor na linha seleciona - Função no JS */
+  background-color: rgba(128, 128, 128, 0.507);
+  border: 2px solid rgba(255, 0, 0, 0.678);
+}
+.completed{ /* Usada para adicionar cor na linha seleciona - Função no JS */
+  background-color: rgba(76, 164, 110, 0.445);
+  text-decoration: line-through;
+  text-decoration-color: white;
+}
+#lista-tarefas li:hover{
+background-color: rgba(164, 186, 245, 0.582);
+transition: .1s;
+}
+#lista-tarefas li:hover{
+  cursor: pointer;
+}
+#container-informacoes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 6%;
+  width: 20%;
+  top: 10%; /*Tem como referência container-tarefas*/
+  left: 50%;/*Tem como referência container-tarefas*/
+  transform: translate(-50%, -50%); /*Tem como referência container-tarefas*/
+}
+#container-informacoes h2{
+  display: flex;
+  justify-content: flex-end;
+  width: 70%;
+  font-family: var(--fonte-titulos);
+  font-size: 2em;
+}
+#container-informacoes p{
+  width: 30%;
+  font-size: .6em;
+  padding-left: 20px;
+}
+/* Container-opcoes */
+#container-opcoes{
+  height: 7vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+/* Icons */
+#botoes-icons{
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+#container-opcoes .fa-solid{ /* as configurações dos textos se aplicam aos icons */
+  font-size: 1.7em;
+}
+#container-opcoes .fa-solid:hover{
+  border-bottom: 2px solid rgba(0, 0, 0, 0.377);
+}
+#container-opcoes .fa-circle-xmark{
+  color: rgb(255, 0, 0);
+}
+#container-opcoes .fa-circle-check{
+  color: rgb(0, 128, 0);
+}
+#container-opcoes .transf-botao{
+  padding: 0px 10px;
+}
+#container-opcoes button{
+  border: none;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+/* Footer */
+footer{
+  height: calc(10vh - 20px); /* 20px(header) */
+}
+footer .desenvolvedor{ /*Texto Desenvolvedor*/
+  font-size: .7em;
+  font-weight: 600;
+}
+footer .icones{ /*Tamanho dos Icones*/
+  font-size: 1em;
+  margin-top: 7px;
+}
+footer .icones .fa-brands{/*Todos os filhos exceto o primeiro filho*/
+  color: var(--verde);
+  margin-left: 30px;
+}
+footer .icones a i:hover{ /*Atlerando a cor do icone ao passar o mouse*/
+  color: rgb(0, 0, 0);
+  transition: .5s; /*Tempo de transição*/
+}
+
+/* Responsividade */
+
+@media (max-width: 1440px){ /* Tela: laptop: 1440 x 900 */
+  #container-tarefas{
+    height: 57vh;
+  }
+  #botoes-icons{
+    width: 50%;
+  }
+  #lista-tarefas li{
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 1080px) and (orientation: portrait){ /* Tela: monitorVertical: 1080 x 1920 */
+  header h1{
+    font-size: 2.7em;
+  }
+  header p{
+    font-size: 1.5em;
+  }
+  #lista-tarefas{
+    width: 60%;
+  }
+  #lista-tarefas li{
+    line-height: 75px;
+    font-size: 1em;
+  }
+  #container-informacoes h2{
+    font-size: 2.5em;
+    margin-left: 180px;
+  }
+  #container-informacoes p{
+    font-size: .8em;
+    margin-left: 60px;
+  }
+  #botoes-icons{
+    width: 75%;
+  }
+  #container-inputs input[type='text']{
+    width: 45%;
+    font-size: .8em;
+    line-height: 25px;
+  }
+  #container-inputs p{
+    font-size: .9em;
+  }
+  .btns{
+    padding: 3px;
+    font-size: .7em;
+  }
+  footer .desenvolvedor{ /*Texto Desenvolvedor*/
+    font-size: .9em;
+  }
+  footer .icones{ /*Tamanho dos Icones*/
+    font-size: 1.4em;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1024px){ /* Tela: ipad: 1024 x 768 */
+  #lista-tarefas{
+    width: 25%;
+  }
+  #botoes-icons{
+    width: 70%;
+  }
+}
