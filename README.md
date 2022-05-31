@@ -31,9 +31,8 @@
 
 ##
 <h3>Galeria:</h3>
-<img src="https://github.com/VitorMarceloSantos/Trybe-Projeto-Bonus-Lista-Tarefas/blob/main/Projeto-Trybe-ListaTarefas.png" title="Projeto Lista de Tarefas" alt="J"/>
-<img src="https://github.com/VitorMarceloSantos/Trybe-Projeto-Bonus-Lista-Tarefas/blob/main/listatarefas-nota.png" title="Projeto Lista de Tarefas" alt="J"/>
-
+<img src="https://github.com/VitorMarceloSantos/Trybe-Projeto-Bonus-Lista-Tarefas/blob/main/Projeto-Trybe-ListaTarefas.png" title="Projeto Lista de Tarefas" alt="J"/></br>
+<img src="https://github.com/VitorMarceloSantos/Trybe-Projeto-Bonus-Lista-Tarefas/blob/main/listatarefas-nota.png" title="Projeto Lista de Tarefas" alt="J"/></br>
 
 ##
 
