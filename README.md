@@ -26,12 +26,12 @@
 ##
 
 <div>
-  <h3>Nota Final: - </h3>
+  <h3>Nota Final: 100% </h3>
 </div>
 
 ##
 <h3>Galeria:</h3>
-
+<img src="https://github.com/VitorMarceloSantos/Trybe-Projeto-Bonus-Lista-Tarefas/blob/main/listatarefas-nota.png" title="Projeto Lista de Tarefas" alt="J"/>
 <img src="https://github.com/VitorMarceloSantos/Trybe-Projeto-Bonus-Lista-Tarefas/blob/main/Projeto-Trybe-ListaTarefas.png" title="Projeto Lista de Tarefas" alt="J"/>
 
 ##
